@@ -6,4 +6,8 @@ RUN apt-get update && \
     apt-get clean && \
     cd /etc/default && \
     wget https://raw.githubusercontent.com/sennierer/docker_extensions/master/celeryd && \
-    service rabbitmq-server start
+    cd /etc/init.d && \
+    wget https://raw.githubusercontent.com/celery/celery/3.1/extra/generic-init.d/celeryd && \
+    chmod 0755 celeryd && \
+    service rabbitmq-server start && \
+    service celeryd start

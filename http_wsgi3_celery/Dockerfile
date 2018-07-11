@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN mkdir /virtualenvs && \
     cd /virtualenvs && \
     virtualenv -p python3 default && \
-    source default/bin/activate && \
+    . default/bin/activate && \
     pip install celery
 RUN service rabbitmq-server start
 RUN service celeryd start

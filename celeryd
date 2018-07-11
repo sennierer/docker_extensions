@@ -14,7 +14,7 @@ CELERY_BIN="/var/www/html/myenv/bin/celery"
 # App instance to use
 # comment out this line if you don't use an app
 # use this for Django based ACDH projects:
-#CELERY_APP="PROJEC_NAME.celery:app"
+CELERY_APP="celery:app"
 # or fully qualified:
 #CELERY_APP="proj.tasks:app"
 

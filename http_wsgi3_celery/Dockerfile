@@ -9,3 +9,7 @@ RUN apt-get update && \
     cd /etc/init.d && \
     wget https://raw.githubusercontent.com/celery/celery/3.1/extra/generic-init.d/celeryd && \
     chmod 0755 celeryd
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+CMD ["/usr/bin/supervisord"]

@@ -1,4 +1,4 @@
-FROM acdh/wsgi3
+FROM acdh/http_wsgi3
 MAINTAINER Matthias Schlögl <matthias.schloegl@oeaw.ac.at>
 
 RUN apt-get update && \

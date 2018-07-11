@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get clean && \
     cd /etc/init.d && \
     wget https://raw.githubusercontent.com/celery/celery/3.1/extra/generic-init.d/celeryd && \
-    chmod 0755 celeryd
+    chmod 640 celeryd
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY celeryd /etc/default/celeryd

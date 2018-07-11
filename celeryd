@@ -8,13 +8,13 @@ CELERYD_NODES="worker1"
 #CELERYD_NODES=10
 
 # Absolute or relative path to the 'celery' command:
-#CELERY_BIN="/var/www/html/myenv/bin/celery"
-CELERY_BIN="/virtualenvs/default/bin/celery"
+CELERY_BIN="/var/www/html/myenv/bin/celery"
+#CELERY_BIN="/virtualenvs/default/bin/celery"
 
 # App instance to use
 # comment out this line if you don't use an app
 # use this for Django based ACDH projects:
-CELERY_APP="celery:app"
+CELERY_APP="celery_settings:app"
 # or fully qualified:
 #CELERY_APP="proj.tasks:app"
 

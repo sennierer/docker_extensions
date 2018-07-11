@@ -9,10 +9,5 @@ RUN apt-get update && \
     cd /etc/init.d && \
     wget https://raw.githubusercontent.com/celery/celery/3.1/extra/generic-init.d/celeryd && \
     chmod 0755 celeryd
-RUN mkdir /virtualenvs && \
-    cd /virtualenvs && \
-    virtualenv -p python3 default && \
-    . default/bin/activate && \
-    pip install celery
 RUN service rabbitmq-server start
 RUN service celeryd start

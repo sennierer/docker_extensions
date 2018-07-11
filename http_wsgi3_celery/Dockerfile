@@ -8,6 +8,7 @@ RUN apt-get update && \
     wget https://raw.githubusercontent.com/sennierer/docker_extensions/master/celeryd && \
     cd /etc/init.d && \
     wget https://raw.githubusercontent.com/celery/celery/3.1/extra/generic-init.d/celeryd && \
-    chmod 0755 celeryd && \
-    service rabbitmq-server start && \
-    service celeryd start
+    chmod 0755 celeryd
+RUN pip install celery
+RUN service rabbitmq-server start
+RUN service celeryd start

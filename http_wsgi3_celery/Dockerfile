@@ -14,4 +14,3 @@ COPY start_celery.sh /opt/start_celery.sh
 
 RUN chmod 0755 /opt/start_celery.sh
 
-CMD ["/usr/bin/supervisord"]

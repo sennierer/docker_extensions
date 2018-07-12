@@ -13,4 +13,5 @@ COPY celeryd /etc/default/celeryd
 COPY start_celery.sh /opt/start_celery.sh
 
 RUN chmod 0750 /opt/start_celery.sh && chmod 640 /etc/default/celeryd
+RUN mkdir /var/log/celery/ && mkdir /var/run/celery/ && chown user:user /var/run/celery/ && chown user:user /var/log/celery/ && chmod 2755 /var/run/celery/ && chmod 2755 /var/log/celery/
 
